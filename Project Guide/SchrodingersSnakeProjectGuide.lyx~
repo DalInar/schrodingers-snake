@@ -1,0 +1,579 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Schrodinger's Snake - Project Guide
+\end_layout
+
+\begin_layout Author
+Joseph Paki
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Subsection
+Background
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset CommandInset href
+LatexCommand href
+name "Schrodinger's Snake project"
+target "https://github.com/DalInar/schrodingers-snake"
+
+\end_inset
+
+ is a collection of Python assignments developed for the undergraduate quantum
+ mechanics class at the University of Michigan.
+ It is freely available on 
+\begin_inset CommandInset href
+LatexCommand href
+name "github"
+target "https://github.com/DalInar/schrodingers-snake"
+
+\end_inset
+
+, and for each assignment includes both a 
+\begin_inset Quotes eld
+\end_inset
+
+problem notebook
+\begin_inset Quotes erd
+\end_inset
+
+ (which you would give to students for homework) and a completed 
+\begin_inset Quotes eld
+\end_inset
+
+solution notebook
+\begin_inset Quotes erd
+\end_inset
+
+ (for the grader to check results and provide to students afterwards).
+ The assignments take the form of 
+\begin_inset CommandInset href
+LatexCommand href
+name "Jupyter"
+target "https://jupyter.org/"
+
+\end_inset
+
+ notebooks, which makes them very portable, allows students to both submit
+ code and written responses to questions, and allows instructors to provide
+ written feedback on assignments within the submitted notebooks.
+ The general purpose of the project is two-fold: 
+\end_layout
+
+\begin_layout Enumerate
+Use the power and flexibility of Python / Jupyter notebooks to allow students
+ to explore problems and concepts in quantum mechanics that are difficult
+ / impossible to do via pencil and paper.
+ In addition to allowing students to solve harder math problems, programming
+ assignments can contain animations and plots that reveal behavior that
+ is otherwise difficult to appreciate.
+\end_layout
+
+\begin_layout Enumerate
+Expose physics undergraduates to programming tools and concepts.
+ Given the wide range of jobs and research opportunities that require programmin
+g knowledge, properly equipping physics undergraduates for their future
+ careers requires incorporating some level of programming experience into
+ their training.
+ Python is both a widely used and incredibly flexible programming language,
+ as well as one of the easiest to learn.
+ It is hoped that these resources will help students obtain a level of comfort
+ with basic programming concepts, as well as empower them with another problem
+ solving tool.
+\end_layout
+
+\begin_layout Subsection
+Getting Started
+\end_layout
+
+\begin_layout Standard
+Working with the programs in Schrodinger's Snake requires Python (version
+ 3.x is recommended) and Jupyter Notebook.
+ The simplest way to get everything you need is to install Anaconda, a free
+ and open source package of Python (and R) tools and libraries for scientific
+ computing and data analysis.
+ It can be downloaded at the 
+\begin_inset CommandInset href
+LatexCommand href
+name "Anaconda website"
+target "https://www.anaconda.com/download/"
+
+\end_inset
+
+, and I recommend getting the Python 3.x version to avoid issues with the
+ differences between Python 2 and 3.
+\end_layout
+
+\begin_layout Standard
+Once Anaconda is installed, you can start Jupyter by running the Anaconda
+ Navigator.
+ This visual interface is where you can launch various tools (like Jupyter),
+ and also where you can update and install Python libraries.
+ A panel with the Jupyter Notebook logo should appear on the front screen
+ - click on the Launch button below it, and Jupyter will open up in a new
+ browser tab.
+\end_layout
+
+\begin_layout Section
+Guide to the Assignments
+\end_layout
+
+\begin_layout Standard
+The following is a summary of the topics and programming concepts covered
+ by the various notebooks in Schrodinger's Snake.
+ They are listed roughly in the order in which topics might come up during
+ an undergraduate quantum mechanics class.
+ The individual projects are contained in folders (of the same name) in
+ the GitHub repo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Introduction to Jupyter
+\end_layout
+
+\begin_layout Standard
+This provides:
+\end_layout
+
+\begin_layout Enumerate
+a PDF the guides students on how to install Anaconda and how to run Jupyter,
+ as well as provides some context for why scientific computing is a critical
+ component of modern science.
+\end_layout
+
+\begin_layout Enumerate
+A notebook that walks students through some of the basics of Python and
+ how to work with Jupyter
+\end_layout
+
+\begin_layout Standard
+This is typically the first computational assignment given to students,
+ and is intended to get everyone (even those with no programming experience)
+ up to speed quickly and prepare them for the following assignments.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename IntroToJupyter.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Infinite Square Well 
+\end_layout
+
+\begin_layout Standard
+This assignment explores the behavior of stationary states and superposition
+ states.
+ Students learn how to represent wavefunctions and space with discrete arrays,
+ and they produce animations of that allow them to compare the time-depedence
+ of stationary states and arbitrary superpositions of energy eigenstates.
+ The end of the notebook also introduces them to momentum space.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename InfiniteSquareWell.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simple Harmonic Oscillator - Plotting Eigenstates
+\end_layout
+
+\begin_layout Standard
+Compares the classical SHO to the quantum SHO.
+ Students program the energy eigenstate wavefunctions of the SHO and compare
+ the classical probability distribution to that obtained from 
+\begin_inset Formula $|\psi_{n}(x)|^{2}$
+\end_inset
+
+, and take note of the comparison as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
+ This also introduces them to the special functions available through SciPy,
+ as needed for the Hermite polynomials.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SHO-PlottingEigenstates.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Simple Harmonic Oscillator - Coherent States
+\end_layout
+
+\begin_layout Standard
+Students learn how to represent and build SHO coherent states via superpositions
+ of energy eigenstates.
+ Animations allow them to compare the time-dependence of coherent states
+ with arbitrary superpositions.
+ They also consider the consquences of truncating the infinite series that
+ defines the coherent states.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename SHO-CoherentStates.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Double Finite Square Well
+\end_layout
+
+\begin_layout Standard
+This notebook is meant as a demonstration of the shooting method for numerically
+ solving for the eigenenergies and eigenstates of the double finite square
+ well.
+ It includes an interactive plot that allows students to see how the energies
+ change as the distance between the two wells changes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename DoubleFiniteSquareWell.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Fourier Transform
+\end_layout
+
+\begin_layout Standard
+This assignment walks students through how to perform Fourier transforms
+ with NumPy.
+ As the notebook describes, this is not entirely straightforward since the
+ continuous Fourier transform must mapped onto the discrete Fourier transforms
+ supported by the NumPy library.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FourierTransform.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Finite Square Well + Transfer Matrix
+\end_layout
+
+\begin_layout Standard
+Student use the shooting method to numerical solve for the first two energy
+ states of the finite square well.
+ They also calculate expectation values and use Fourier transforms to verify
+ the space-momentum uncertainty principle.
+ As an extra credit challenge, they can also try to use transfer matrices
+ to find the transmission coefficient through two finite square wells as
+ a function of energy.
+ (This notebook assumes students are familiar with the Shooting Method and
+ Fourier Transforms.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename FiniteSquareWell.PNG
+	display false
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Gaussian Wavepacket
+\end_layout
+
+\begin_layout Subsection
+Finite Spherical Well
+\end_layout
+
+\begin_layout Subsection
+Hydrogen
+\end_layout
+
+\begin_layout Subsection
+Spin Precession
+\end_layout
+
+\begin_layout Subsection
+Kronig Penney
+\end_layout
+
+\end_body
+\end_document
