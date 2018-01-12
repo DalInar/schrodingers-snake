@@ -5,6 +5,9 @@ The Introduction to Jupyter folder contains a PDF that will guide you through se
 
 ## References
 Some of these notebooks were inspired/based on other people's work, such as these great resources:
+
 https://www.numfys.net/examples/
+
 https://github.com/jrjohansson/scientific-python-lectures
+
 https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks
