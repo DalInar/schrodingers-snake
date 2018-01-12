@@ -1,7 +1,9 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass article
 \use_default_options true
 \maintain_unincluded_children false
@@ -9,16 +11,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family rmdefault
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
-
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -29,15 +31,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 1
 \index Index
 \shortcut idx
@@ -69,6 +80,14 @@ Quantum Physics and Jupyter
 \end_inset
 
 Getting Started
+\end_layout
+
+\begin_layout Author
+Joseph Paki
+\begin_inset Newline newline
+\end_inset
+
+oryx@umich.edu
 \end_layout
 
 \begin_layout Section*
@@ -122,7 +141,8 @@ Agenda
 This is a tutorial to help you get setup and ready for the first computational
  exercises.
  If you're not familiar with Python or Jupyter, you should make sure to
- complete it before attempting the exercises! Here's what you need to do:
+ complete the tutorial before attempting the exercises! Here's what you
+ need to do:
 \end_layout
 
 \begin_layout Enumerate
@@ -144,15 +164,20 @@ target "https://www.continuum.io/downloads"
 \end_inset
 
  for your operating system of choice.
- Pick the Python 3.5 version.
- Anaconda is an easy to install and use open source, high performance package
- of everything you'll need for the exercies.
+ Pick the Python 3.x version.
+ (The value of 'x' changes over time, but grab whatever is currently available
+ on the Anaconda website.) Anaconda is a free and easy to install and use
+ package of everything you'll need for the exercises.
  In particular, it includes
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-Python 3.5, as well as the libraries you'll need, like 
+Python 3.x, as well as the libraries you'll need, like 
 \begin_inset CommandInset href
 LatexCommand href
 name "NumPy"
@@ -214,9 +239,10 @@ Run the example Jupyter notebook,
 \begin_inset Formula $\mathtt{.ipynb}$
 \end_inset
 
- is the file extension for Jupyter Python notebooks.) This notebook will
- walk you through some of the basics of Python and Jupyter, with fill in
- the blank sections for you to test your knowledge.
+ is the file extension for Jupyter Python notebooks.) Instructions for how
+ to open the notebook are below.
+ This notebook will walk you through some of the basics of Python and Jupyter,
+ with fill in the blank sections for you to test your knowledge.
  Feel free to experiment with this notebook!
 \end_layout
 
@@ -225,6 +251,8 @@ Once you've completed the exercise at the end of the notebook, please upload
  the notebook file to Canvas.
  Again, this will not be graded, but we want to make sure that everyone
  can get Jupyter up and running.
+ (Canvas automatically renames your file uploads, so you don't have to give
+ your notebook a special name.)
 \end_layout
 
 \begin_layout Standard
@@ -255,8 +283,7 @@ target "https://stackoverflow.com/"
 \end_inset
 
 , the center of the debugging universe.
- If that doesn't help, shoot your instructor a message or go to their office
- hours!
+ If that doesn't help, shoot your GSI a message or go to their office hours!
 \end_layout
 
 \begin_layout Standard
@@ -322,7 +349,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Jupyter on Windows in a new tab in Chrome 
@@ -380,7 +407,7 @@ target "https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectur
 
 \end_inset
 
-by J.R.
+ by J.R.
  Johansson.
  These notes are actually all Jupyter notebooks, and they are a very easy
  to follow guide for Python, NumPy, and Matplotlib.
