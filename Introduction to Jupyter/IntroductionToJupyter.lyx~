@@ -1,0 +1,452 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Quantum Physics and Jupyter
+\begin_inset Newline newline
+\end_inset
+
+Getting Started
+\end_layout
+
+\begin_layout Author
+Joseph Paki
+\begin_inset Newline newline
+\end_inset
+
+oryx@umich.edu
+\end_layout
+
+\begin_layout Section*
+Why Programming?
+\end_layout
+
+\begin_layout Standard
+Physicists have traditionally been divided into two (mostly friendly) camps:
+ experimentalists and theorists.
+ However, in parallel with the development of modern computers and programming
+ techniques, a third camp has developed: computationalists.
+ Computational physicists can be found in just about every field of physics,
+ from cosmology to biophysics, and the problems they attempt to solve range
+ from wrangling the enormous data sets produced by CERN to simulating how
+ fires spread through buildings.
+ 
+\end_layout
+
+\begin_layout Standard
+Although some physicists specialize in advanced computational methods, it
+ has become increasingly important for physicists of all stripes to learn
+ some programming techniques.
+ It's not often that one encounters a frictionless surface, or a graduate
+ student who wants to spend their nights collecting thousands of voltage
+ readings! Computational methods allow scientists to ease tedious tasks
+ as well as explore ideas well beyond the constraints of a chalkboard.
+\end_layout
+
+\begin_layout Standard
+Luckily, it's really not too hard to pick up some useful programming skills.
+ Throughout this class we will use numerical methods to explore and visualize
+ quantum mechanics, which will hopefully help us understand some of the
+ concepts as well as extend our reach beyond the very limited number of
+ analytically solvable problems.
+ Our programming language of choice will be 
+\begin_inset CommandInset href
+LatexCommand href
+name "Python"
+target "https://www.python.org/"
+
+\end_inset
+
+, because it's both easy to learn and very powerful.
+\end_layout
+
+\begin_layout Section*
+Agenda
+\end_layout
+
+\begin_layout Standard
+This is a tutorial to help you get setup and ready for the first computational
+ exercises.
+ If you're not familiar with Python or Jupyter, you should make sure to
+ complete the tutorial before attempting the exercises! Here's what you
+ need to do:
+\end_layout
+
+\begin_layout Enumerate
+Obviously you'll need access to a computer to program! Please tell your
+ instructor 
+\emph on
+immediately 
+\emph default
+if you do not have a computer so that they can find a work around.
+\end_layout
+
+\begin_layout Enumerate
+Install 
+\begin_inset CommandInset href
+LatexCommand href
+name "Anaconda"
+target "https://www.continuum.io/downloads"
+
+\end_inset
+
+ for your operating system of choice.
+ Pick the Python 3.x version.
+ (The value of 'x' changes over time, but grab whatever is currently available
+ on the Anaconda website.) Anaconda is a free and easy to install and use
+ package of everything you'll need for the exercises.
+ In particular, it includes
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Python 3.x, as well as the libraries you'll need, like 
+\begin_inset CommandInset href
+LatexCommand href
+name "NumPy"
+target "http://www.numpy.org/"
+
+\end_inset
+
+ for math and 
+\begin_inset CommandInset href
+LatexCommand href
+name "matplotlib"
+target "http://matplotlib.org/"
+
+\end_inset
+
+ for visualization.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset CommandInset href
+LatexCommand href
+name "Jupyter"
+target "https://jupyter.org/"
+
+\end_inset
+
+, which is a super nifty way of programming in Python that sort of resembles
+ a Mathematica notebook.
+ A Jupyter notebook is a document that you view through your web browser,
+ in which you can run Python code as well as write nice looking text and
+ equations to explain what you're doing.
+ Here is an example of one that let's you 
+\begin_inset Quotes eld
+\end_inset
+
+hear
+\begin_inset Quotes erd
+\end_inset
+
+ the 
+\begin_inset CommandInset href
+LatexCommand href
+name "energy spectrum of hydrogen"
+target "http://nbviewer.jupyter.org/github/Carreau/posts/blob/master/07-the-sound-of-hydrogen.ipynb"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Run the example Jupyter notebook, 
+\begin_inset Formula $\mathtt{JupyterTutorial.ipynb}$
+\end_inset
+
+.
+ (
+\begin_inset Formula $\mathtt{.ipynb}$
+\end_inset
+
+ is the file extension for Jupyter Python notebooks.) Instructions for how
+ to open the notebook are below.
+ This notebook will walk you through some of the basics of Python and Jupyter,
+ with fill in the blank sections for you to test your knowledge.
+ Feel free to experiment with this notebook!
+\end_layout
+
+\begin_layout Enumerate
+Once you've completed the exercise at the end of the notebook, please upload
+ the notebook file to Canvas.
+ Again, this will not be graded, but we want to make sure that everyone
+ can get Jupyter up and running.
+\end_layout
+
+\begin_layout Standard
+Note: If you already have Python and Jupyter installed and know what you're
+ doing, you don't have to install Anaconda.
+ For this class you should be able to use either Python 2 or Python 3, though
+ please use Python 3 compliant 
+\begin_inset Formula $\mathtt{print}$
+\end_inset
+
+ statements (with parenthesis).
+\end_layout
+
+\begin_layout Section*
+Details
+\end_layout
+
+\begin_layout Standard
+The installation of Anaconda is usually straightforward, but it's likely
+ that some people will run into issues.
+ Your first response to these issues should be to turn to Google, which
+ will probably direct you to 
+\begin_inset CommandInset href
+LatexCommand href
+name "StackOverflow"
+target "https://stackoverflow.com/"
+
+\end_inset
+
+, the center of the debugging universe.
+ If that doesn't help, shoot your GSI a message or go to their office hours!
+\end_layout
+
+\begin_layout Standard
+Once you have Anaconda installed, you'll want to start up the Jupyter notebook.
+ Just how you do this depends on your operating system.
+ On Linux and Mac, you open a terminal and type:
+\end_layout
+
+\begin_layout LyX-Code
+> jupyter notebook
+\end_layout
+
+\begin_layout Standard
+On Windows, just search for the application 
+\begin_inset Formula $\mathtt{Jupyter}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathtt{Notebook}$
+\end_inset
+
+.
+ You could also open the 
+\begin_inset Formula $\mathtt{Anaconda}$
+\end_inset
+
+ 
+\begin_inset Formula $\mathtt{Prompt}$
+\end_inset
+
+ program, which starts up a terminal.
+ In the terminal, you can navigate to a desired directory and start up Jupyter
+ there with the same command as on Linux.
+\end_layout
+
+\begin_layout Standard
+Either way, Jupyter will open up as a new tab in your browser.
+ Here's what it looks like on Windows in Chrome.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Jupyter-on-Windows"
+
+\end_inset
+
+ (No idea how those video games ended up there...)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Capture.PNG
+	width 80line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Jupyter on Windows in a new tab in Chrome 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Jupyter-on-Windows"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+When Jupyter first starts, you'll see a file directory.
+ On Linux or Max, you'll be in whatever directory you were in your terminal.
+ On Windows, you'll probably be in your home folder, as in the screenshot.
+ In order to open the 
+\begin_inset Formula $\mathtt{JupyterTutorial.ipynb}$
+\end_inset
+
+ notebook, just navigate to the folder you saved it in (within the Jupyter
+ browser tab!) and double click the file.
+ This will open up another new tab containing the document, and it is here
+ that you can edit and run the code.
+\end_layout
+
+\begin_layout Standard
+Once you have the tutorial notebook open, follow along with the instructions
+ to learn about Python and how to use the Jupyter notebook.
+\end_layout
+
+\begin_layout Section*
+Help!
+\end_layout
+
+\begin_layout Standard
+This may be a lot of new stuff for you to learn, so you'll probably get
+ confused and stuck at some point.
+ That's okay! You should feel free to ask your friends, the internet, or
+ your instructors for help with any issues.
+ In addition, here are some highly recommended references
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Lectures on Scientific Computing with Python"
+target "https://nbviewer.jupyter.org/github/jrjohansson/scientific-python-lectures/tree/master/"
+
+\end_inset
+
+ by J.R.
+ Johansson.
+ These notes are actually all Jupyter notebooks, and they are a very easy
+ to follow guide for Python, NumPy, and Matplotlib.
+ Only Lectures 0-4 will be relevant for our class.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Gallery of Interesting IPython Notebooks"
+target "https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks"
+
+\end_inset
+
+.
+ This is a super interesting mix of tutorials and application examples.
+ In reading about Jupyter, you'll probably come across lots of references
+ to IPython, since IPython evolved into Jupyter.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Python Tutorial"
+target "https://docs.python.org/3/tutorial/"
+
+\end_inset
+
+, straight from the source.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+name "Markdown Cheatsheet"
+target "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet"
+
+\end_inset
+
+for writing text in Jupyter notebooks.
+\end_layout
+
+\end_body
+\end_document
